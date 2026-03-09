@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Básico -->
+    <title>Portfólio | Estudante de TI</title>
+    <meta name="description"
+        content="Portfólio de estudante de TI em busca de oportunidade de estágio, com projetos e habilidades.">
+
+    <!-- Google Fonts: Poppins para visual moderno e tech -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Boxicons para ícones elegantes -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header e Navbar -->
+    <header class="header">
+        <a href="#home" class="logo">Portfólio<span>.</span></a>
+
+        <!-- Ícone para menu móvel (hambúrguer) -->
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Seção Home / Hero -->
+    <section class="home" id="home">
+        <div class="home-content reveal">
+            <h3>Olá, eu sou</h3>
+            <!-- SUBSTITUA O TEXTO ABAIXO PELO SEU NOME -->
+            <h1>Octávio Marcelo Bernardino Gomes</h1>
+            <h3>Eu sou um <span class="multiple-text">Desenvolvedor em formação</span></h3>
+            <p>Estudante de TI na escola <strong>EEEP Professora Luiza de Teodoro</strong>. Apaixonado por tecnologia e
+                focado em construir uma carreira sólida em desenvolvimento. Atualmente buscando a minha primeira
+                oportunidade de estágio para colocar meus conhecimentos em prática!</p>
+
+            <div class="social-media">
+                <a href="https://github.com" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="mailto:seuemail@teste.com"><i class='bx bx-envelope'></i></a>
+            </div>
+
+            <a href="#projetos" class="btn">Ver Projetos</a>
+        </div>
+
+        <div class="home-img reveal">
+            <!-- Espaço reservado (Placeholder) para uma foto de perfil ou ilustração -->
+            <!-- Para usar sua foto, remova o <i> e coloque <img src="suafoto.png" alt="Sua foto de perfil"> -->
+            <div class="img-box">
+                <i class='bx bx-code-alt'></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Mim -->
+    <section class="sobre" id="sobre">
+        <h2 class="heading reveal">Sobre <span>Mim</span></h2>
+
+        <div class="sobre-content reveal">
+            <h3>Estudante do 3º ano - Técnico em Informática</h3>
+            <p>Atualmente curso o 3º ano de TI na <strong>EEEP Professora Luiza de Teodoro</strong>. Ao longo dessa
+                jornada, desenvolvi uma forte afinidade com programação e lógica.</p>
+            <p>Sou uma pessoa curiosa, sempre disposta a aprender e absorver novos conhecimentos. Estou em constante
+                evolução, aprofundando minhas habilidades em desenvolvimento frontend e backend. Meu atual objetivo é
+                encontrar um <strong>estágio na área de tecnologia</strong> focado em desenvolvimento, onde eu possa
+                contribuir nos projetos da empresa e evoluir em time.</p>
+        </div>
+    </section>
+
+    <!-- Seção de Habilidades -->
+    <section class="habilidades" id="habilidades">
+        <h2 class="heading reveal">Minhas <span>Habilidades</span></h2>
+
+        <!-- Cards com barras de progresso animadas -->
+        <div class="habilidades-container">
+            <div class="habilidade-box reveal">
+                <div class="habilidade-info">
+                    <h4>HTML5 / CSS3</h4>
+                    <span>90%</span>
+                </div>
+                <div class="habilidade-bar" data-progress="90%">
+                    <span class="bar-progress"></span>
+                </div>
+            </div>
+
+            <div class="habilidade-box reveal">
+                <div class="habilidade-info">
+                    <h4>JavaScript Puro</h4>
+                    <span>70%</span>
+                </div>
+                <div class="habilidade-bar" data-progress="70%">
+                    <span class="bar-progress"></span>
+                </div>
+            </div>
+
+            <div class="habilidade-box reveal">
+                <div class="habilidade-info">
+                    <h4>Lógica de Programação</h4>
+                    <span>85%</span>
+                </div>
+                <div class="habilidade-bar" data-progress="85%">
+                    <span class="bar-progress"></span>
+                </div>
+            </div>
+
+            <div class="habilidade-box reveal">
+                <div class="habilidade-info">
+                    <h4>Informática (Redes / SO)</h4>
+                    <span>95%</span>
+                </div>
+                <div class="habilidade-bar" data-progress="95%">
+                    <span class="bar-progress"></span>
+                </div>
+            </div>
+
+            <div class="habilidade-box reveal">
+                <div class="habilidade-info">
+                    <h4>Git e GitHub (Básico)</h4>
+                    <span>60%</span>
+                </div>
+                <div class="habilidade-bar" data-progress="60%">
+                    <span class="bar-progress"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section class="projetos" id="projetos">
+        <h2 class="heading reveal">Meus <span>Projetos</span></h2>
+
+        <div class="projetos-container">
+            <!-- Projeto Fictício 1 -->
+            <div class="projeto-box reveal">
+                <div class="projeto-icon">
+                    <i class='bx bx-globe'></i>
+                </div>
+                <h3>Site Institucional</h3>
+                <p>Criação de um site corporativo responsivo focado na exibição de serviços e portfólio de uma agência
+                    fictícia, utilizando manipulação de DOM para interatividades.</p>
+                <a href="#" class="btn-projeto">Ver Projeto</a>
+            </div>
+
+            <!-- Projeto Fictício 2 -->
+            <div class="projeto-box reveal">
+                <div class="projeto-icon">
+                    <i class='bx bxl-javascript'></i>
+                </div>
+                <h3>Sistema Simples em JS</h3>
+                <p>Uma aplicação To-Do List interativa para gestão de tarefas, operando com estado local (localStorage)
+                    construída totalmente em HTML, CSS e JavaScript puro.</p>
+                <a href="#" class="btn-projeto">Ver Projeto</a>
+            </div>
+
+            <!-- Projeto Fictício 3 -->
+            <div class="projeto-box reveal">
+                <div class="projeto-icon">
+                    <i class='bx bx-rocket'></i>
+                </div>
+                <h3>Landing Page</h3>
+                <p>Desenvolvimento de uma página de alta conversão (lead capture) focada em UI/UX moderno, Dark Mode e
+                    otimização de velocidade de carregamento.</p>
+                <a href="#" class="btn-projeto">Ver Projeto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section class="contato" id="contato">
+        <h2 class="heading reveal">Fale <span>Comigo</span></h2>
+
+        <!-- Formulário para currículo e recrutadores -->
+        <form action="#" id="contact-form" class="reveal">
+            <div class="input-box">
+                <input type="text" id="nome" placeholder="Seu Nome Completo" required>
+                <input type="email" id="email" placeholder="Endereço de E-mail" required>
+            </div>
+
+            <textarea id="mensagem" cols="30" rows="10" placeholder="Digite sua Mensagem para proposta de estágio..."
+                required></textarea>
+
+            <button type="submit" class="btn">Enviar Mensagem</button>
+
+            <!-- Feedback Mensagem de Envio -->
+            <div id="form-msg" class="form-feedback hidden">Sua mensagem foi enviada com sucesso! Entrarei em contato.
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer da Página -->
+    <footer class="footer">
+        <div class="footer-text">
+            <!-- O JS injetará o ano atual no span #ano-atual -->
+            <p>&copy; <span id="ano-atual"></span> pelo Futuro Desenvolvedor(a). Estudante EEEP Professora Luiza de
+                Teodoro.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home" title="Voltar ao Topo"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <!-- Script Customizado -->
+    <script src="script.js"></script>
+</body>
+
+</html>

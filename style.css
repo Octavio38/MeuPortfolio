@@ -1,0 +1,648 @@
+/* ========= Design Tokens / Variáveis CSS ========= */
+:root {
+    --bg-color: #0b0f19;
+    /* Background Dark moderno */
+    --second-bg-color: #111827;
+    /* Fundo Secundário */
+    --text-color: #f3f4f6;
+    /* Texto Claro */
+    --text-dim: #9ca3af;
+    /* Texto Acinzentado */
+
+    /* Cores de destaque no tema "Tech" */
+    --main-color: #0ea5e9;
+    /* Ciano / Azul Claro */
+    --main-color-hover: #38bdf8;
+
+    /* Efeito de Vidro (Glassmorphism) */
+    --card-bg: rgba(17, 24, 39, 0.75);
+    --border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ========= Reset e Configuração Básica ========= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    /* Efeito de scroll suave via CSS */
+    font-family: 'Poppins', sans-serif;
+    /* Fonte moderna sem-serifa */
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    /* Previne scroll horizontal */
+}
+
+/* ========= Header / Navegação ========= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+/* Classe aplicada via JS quando rola a página */
+.header.sticky {
+    background: rgba(11, 15, 25, 0.85);
+    backdrop-filter: blur(10px);
+    /* Glass effect no header */
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 8%;
+}
+
+.logo {
+    font-size: 25px;
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.navbar a {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-left: 35px;
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+/* Linha debaixo (under-line) animada nos links */
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--main-color);
+    transition: 0.3s;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+    width: 100%;
+}
+
+/* Ocultado no desktop */
+#menu-icon {
+    font-size: 30px;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+/* ========= Estilos Base das Sections ========= */
+section {
+    min-height: 100vh;
+    /* Ocupa pelo menos a tela toda */
+    padding: 100px 8% 20px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+/* ========= Hero Section (Home) ========= */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 20px;
+}
+
+.home-content h3 span {
+    color: var(--main-color);
+}
+
+.home-content h1 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 5px 0;
+}
+
+.home-content p {
+    font-size: 16px;
+    color: var(--text-dim);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Ícones das Redes Sociais */
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    font-size: 22px;
+    color: var(--main-color);
+    margin: 0 10px 30px 0;
+    transition: 0.4s ease;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px var(--main-color);
+    transform: translateY(-5px);
+}
+
+/* Botão Primário */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--main-color);
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--main-color);
+    font-size: 16px;
+    color: var(--bg-color);
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--main-color-hover);
+    box-shadow: 0 0 20px var(--main-color);
+    transform: translateY(-3px);
+}
+
+/* Avatar / Placeholder Fluutuante Animado */
+.home-img .img-box {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(14, 165, 233, 0.01));
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.2);
+    animation: float 4s ease-in-out infinite;
+    /* efeito suave subindo e descendo */
+}
+
+/* Caso a pessoa queira colocar uma imagem, ela seria assim:
+.home-img .img-box img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+*/
+
+.home-img .img-box i {
+    font-size: 150px;
+    color: var(--main-color);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* ========= Sobre Mim ========= */
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--second-bg-color);
+}
+
+.sobre-content {
+    max-width: 800px;
+    text-align: center;
+    /* Glassmorphism card */
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 50px 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.sobre-content h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: var(--main-color);
+}
+
+.sobre-content p {
+    font-size: 16px;
+    color: var(--text-dim);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* ========= Habilidades ========= */
+.habilidades {
+    background: var(--bg-color);
+}
+
+.habilidades-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.habilidade-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 20px 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+}
+
+.habilidade-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.habilidade-info span {
+    color: var(--main-color);
+}
+
+/* Fundo da barra */
+.habilidade-bar {
+    width: 100%;
+    height: 8px;
+    background: #1f2937;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Progresso em si */
+.bar-progress {
+    display: block;
+    height: 100%;
+    background: var(--main-color);
+    border-radius: 4px;
+    width: 0;
+    /* Começa pequeno e expande pelo JS */
+    transition: width 1.5s ease-out;
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+/* ========= Projetos ========= */
+.projetos {
+    background: var(--second-bg-color);
+}
+
+.projetos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.projeto-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px 25px;
+    text-align: center;
+    transition: 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projeto-box:hover {
+    transform: translateY(-10px);
+    border-color: var(--main-color);
+    box-shadow: 0 10px 25px rgba(14, 165, 233, 0.15);
+}
+
+.projeto-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(14, 165, 233, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.projeto-icon i {
+    font-size: 35px;
+    color: var(--main-color);
+}
+
+.projeto-box h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.projeto-box p {
+    font-size: 15px;
+    color: var(--text-dim);
+    margin-bottom: 25px;
+    line-height: 1.6;
+    flex-grow: 1;
+    /* Preenche o espaço excedente de texto diferente */
+}
+
+.btn-projeto {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid var(--main-color);
+    border-radius: 8px;
+    color: var(--main-color);
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.projeto-box:hover .btn-projeto {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+/* ========= Contato ========= */
+.contato {
+    background: var(--bg-color);
+    padding-bottom: 150px;
+}
+
+.contato form {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contato form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contato form .input-box input,
+.contato form textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    color: var(--text-color);
+    background: var(--card-bg);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    transition: 0.3s;
+}
+
+.contato form .input-box input:focus,
+.contato form textarea:focus {
+    border-color: var(--main-color);
+}
+
+.contato form .input-box input {
+    width: 49%;
+}
+
+.contato form textarea {
+    resize: none;
+}
+
+/* Feedback de Validação Visual */
+.form-feedback {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(16, 185, 129, 0.15);
+    /* Verde Tech */
+    color: #3fefb0;
+    border: 1px solid #059669;
+    font-size: 14px;
+    transition: opacity 0.5s, transform 0.5s;
+    opacity: 1;
+    display: none;
+}
+
+.form-feedback.active {
+    display: block;
+}
+
+/* ========= Footer ========= */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 8%;
+    background: var(--second-bg-color);
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-text p {
+    font-size: 14px;
+    color: var(--text-dim);
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    background: var(--main-color);
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.footer-iconTop a i {
+    font-size: 24px;
+    color: var(--bg-color);
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 10px var(--main-color);
+    transform: scale(1.1);
+    /* Um pequeno zoom */
+}
+
+/* ========= Reveal Animations (Controladas pelo Script) ========= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active-reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========= Responsividade (Mobile e Telas Menores) ========= */
+@media (max-width: 991px) {
+    .header {
+        padding: 20px 4%;
+    }
+
+    .header.sticky {
+        padding: 15px 4%;
+    }
+
+    section {
+        padding: 80px 4% 20px;
+    }
+
+    .footer {
+        padding: 15px 4%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Ativa ícone de menu hamburger */
+    #menu-icon {
+        display: block;
+    }
+
+    /* Estiliza navbar suspensa no mobile */
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 10px 4%;
+        background: var(--second-bg-color);
+        border-bottom: 2px solid var(--main-color);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        display: none;
+        flex-direction: column;
+        transition: 0.3s ease;
+    }
+
+    /* Modificador ativo por JS */
+    .navbar.active {
+        display: flex;
+        animation: navAnim 0.3s ease forwards;
+    }
+
+    @keyframes navAnim {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 18px;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .navbar a::after {
+        display: none;
+    }
+
+    /* Ajustes na Hero */
+    .home {
+        flex-direction: column-reverse;
+        /* Foto acima do texto ou vice e versa se preferir column */
+        text-align: center;
+        justify-content: center;
+        padding-top: 120px;
+    }
+
+    .home-content {
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+
+    .home-img .img-box {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+    }
+
+    .home-img .img-box i {
+        font-size: 100px;
+    }
+
+    /* Ajuste Formulário */
+    .contato form .input-box input {
+        width: 100%;
+    }
+
+    /* Ajuste Footer */
+    .footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 90%;
+    }
+
+    .home-content h1 {
+        font-size: 35px;
+    }
+
+    .home-img .img-box {
+        width: 220px;
+        height: 220px;
+    }
+}
