@@ -251,6 +251,20 @@ section {
 }
 
 /* ========= Sobre Mim ========= */
+.sobre-container{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.sobre-img img{
+    width: 250px;
+    border-radius: 15px;
+}
+
+.sobre-content{
+    max-width: 600px;
+}
 .sobre {
     display: flex;
     justify-content: center;
@@ -645,4 +659,5 @@ section {
         width: 220px;
         height: 220px;
     }
+
 }
