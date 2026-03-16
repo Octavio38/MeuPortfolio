@@ -414,6 +414,15 @@ section {
     font-weight: 500;
     transition: 0.3s;
 }
+.projeto-botoes{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.btn-projeto:hover{
+    background: var(--main-color);
+    color: var(--bg-color);
+}
 
 .projeto-box:hover .btn-projeto {
     background: var(--main-color);
