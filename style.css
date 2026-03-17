@@ -389,6 +389,11 @@ section {
     font-size: 35px;
     color: var(--main-color);
 }
+.projeto-icon img{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
 
 .projeto-box h3 {
     font-size: 22px;
