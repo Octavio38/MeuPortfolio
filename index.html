@@ -4,21 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Básico -->
-    <title>Octávio Marcelo Bernardino Gomes | Portfólio</title>
-    <meta name="description"
-        content="Portfólio de estudante de TI em busca de oportunidade de estágio, com projetos e habilidades.">
+    <title>Octávio Gomes | Desenvolvedor Frontend</title>
+    <meta name="description" content="Portfólio de Octávio Gomes — estudante de TI e desenvolvedor frontend em busca de estágio.">
 
-    <!-- Google Fonts: Poppins para visual moderno e tech -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Boxicons para ícones elegantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <!-- CSS Customizado -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -27,193 +19,244 @@
     <!-- Header e Navbar -->
     <header class="header">
         <a href="#home" class="logo">Portfólio<span>.</span></a>
-
-        <!-- Ícone para menu móvel (hambúrguer) -->
         <div class="bx bx-menu" id="menu-icon"></div>
-
         <nav class="navbar">
             <a href="#home" class="active">Início</a>
             <a href="#sobre">Sobre</a>
             <a href="#habilidades">Habilidades</a>
             <a href="#projetos">Projetos</a>
+            <a href="#certificados">Certificados</a>
             <a href="#contato">Contato</a>
         </nav>
     </header>
 
-    <!-- Seção Home / Hero -->
+    <!-- Hero Section -->
     <section class="home" id="home">
         <div class="home-content reveal">
             <h3>Olá, eu sou</h3>
-            <!-- SUBSTITUA O TEXTO ABAIXO PELO SEU NOME -->
-            <h1>Octávio Marcelo Bernardino Gomes</h1>
-            <h3>Eu sou um <span class="multiple-text">Desenvolvedor em formação</span></h3>
-            <p>Estudante de TI na escola <strong>EEEP Professora Luiza de Teodoro</strong>. Apaixonado por tecnologia e
-                focado em construir uma carreira sólida. Atualmente buscando a minha primeira
-                oportunidade de estágio para colocar meus conhecimentos em prática!</p>
+            <h1>Octávio <span>Gomes</span></h1>
+            <h3>Eu sou um <span class="multiple-text">Desenvolvedor Frontend</span></h3>
+            <p>Estudante de TI na <strong>EEEP Professora Luiza de Teodoro Vieira</strong>. Apaixonado por tecnologia e focado em construir uma carreira sólida. Atualmente buscando minha primeira oportunidade de estágio!</p>
 
             <div class="social-media">
-                <a href="https://github.com" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="https://www.linkedin.com/in/oct%C3%A1vio-gomes-9a1521380/?isSelfProfile=true" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="octaviomarcelo122128@gmail.com"><i class='bx bx-envelope'></i></a>
+                <a href="https://github.com/Octavio38" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/oct%C3%A1vio-gomes-9a1521380/" target="_blank" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="mailto:octaviomarcelo122128@gmail.com" title="E-mail"><i class='bx bx-envelope'></i></a>
             </div>
 
             <a href="#projetos" class="btn">Ver Projetos</a>
         </div>
 
         <div class="home-img reveal">
-            <!-- Espaço reservado (Placeholder) para uma foto de perfil ou ilustração -->
-            <!-- Para usar sua foto, remova o <i> e coloque <img src="suafoto.png" alt="Sua foto de perfil"> -->
             <div class="img-box">
-                <img src="Fotoportfolio (1).jpg" alt="Sua foto de perfil">
+                <img src="Fotoportfolio (1).jpg" alt="Foto de perfil de Octávio Gomes">
             </div>
         </div>
     </section>
 
-    <section class="sobre" id="sobre"> <h2 class="heading reveal">Sobre <span>Mim</span></h2> <div class="sobre-content reveal"> <h3>Estudante do 3º ano - Técnico em Informática</h3> <p>Atualmente curso o 3º ano de TI na <strong>EEEP Professora Luiza de Teodoro</strong>. Ao longo dessa jornada, desenvolvi uma forte afinidade com programação e lógica.</p> <p>Sou uma pessoa curiosa, sempre disposta a aprender e absorver novos conhecimentos. Estou em constante evolução, aprofundando minhas habilidades em desenvolvimento frontend e backend. Meu atual objetivo é encontrar um <strong>estágio na área de tecnologia</strong> focado em desenvolvimento, onde eu possa contribuir nos projetos da empresa e evoluir em time.</p> </div> </section>
+    <!-- Sobre Mim -->
+    <section class="sobre" id="sobre">
+        <h2 class="heading reveal">Sobre <span>Mim</span></h2>
+        <div class="sobre-content reveal">
+            <h3>Estudante do 3º ano — Técnico em Informática</h3>
+            <p>Atualmente curso o 3º ano de TI na <strong>EEEP Professora Luiza de Teodoro Vieira</strong>. Ao longo dessa jornada, desenvolvi uma forte afinidade com programação e lógica.</p>
+            <p>Sou uma pessoa curiosa, sempre disposta a aprender e absorver novos conhecimentos. Estou em constante evolução, aprofundando minhas habilidades em desenvolvimento frontend e backend. Meu objetivo é encontrar um <strong>estágio na área de tecnologia</strong> onde eu possa contribuir e crescer em equipe.</p>
+        </div>
+    </section>
 
-    <!-- Seção de Habilidades -->
+    <!-- Habilidades — Redesenhada com badges por categoria -->
     <section class="habilidades" id="habilidades">
         <h2 class="heading reveal">Minhas <span>Habilidades</span></h2>
 
-        <!-- Cards com barras de progresso animadas -->
-        <div class="habilidades-container">
-            <div class="habilidade-box reveal">
-                <div class="habilidade-info">
-                    <h4>HTML / CSS</h4>
-                    <span>90%</span>
+        <div class="habilidades-grid">
+
+            <!-- Frontend -->
+            <div class="habilidade-categoria reveal">
+                <div class="categoria-header">
+                    <i class='bx bx-code-alt'></i>
+                    <h3>Frontend</h3>
                 </div>
-                <div class="habilidade-bar" data-progress="90%">
-                    <span class="bar-progress"></span>
+                <div class="badges">
+                    <span class="badge nivel-alto">HTML5</span>
+                    <span class="badge nivel-alto">CSS3</span>
+                    <span class="badge nivel-medio">JavaScript</span>
+                    <span class="badge nivel-medio">Responsividade</span>
                 </div>
             </div>
 
-            <div class="habilidade-box reveal">
-                <div class="habilidade-info">
-                    <h4>JavaScript </h4>
-                    <span>65%</span>
+            <!-- Lógica & Programação -->
+            <div class="habilidade-categoria reveal">
+                <div class="categoria-header">
+                    <i class='bx bx-brain'></i>
+                    <h3>Lógica & Programação</h3>
                 </div>
-                <div class="habilidade-bar" data-progress="65%">
-                    <span class="bar-progress"></span>
-                </div>
-            </div>
-
-            <div class="habilidade-box reveal">
-                <div class="habilidade-info">
-                    <h4>Lógica de Programação</h4>
-                    <span>80%</span>
-                </div>
-                <div class="habilidade-bar" data-progress="80%">
-                    <span class="bar-progress"></span>
+                <div class="badges">
+                    <span class="badge nivel-alto">Lógica de Programação</span>
+                    <span class="badge nivel-medio">Algoritmos</span>
+                    <span class="badge nivel-medio">Estruturas de Dados</span>
                 </div>
             </div>
 
-            <div class="habilidade-box reveal">
-                <div class="habilidade-info">
-                    <h4>Informática (Redes / SO)</h4>
-                    <span>85%</span>
+            <!-- Infraestrutura -->
+            <div class="habilidade-categoria reveal">
+                <div class="categoria-header">
+                    <i class='bx bx-server'></i>
+                    <h3>Infraestrutura</h3>
                 </div>
-                <div class="habilidade-bar" data-progress="85%">
-                    <span class="bar-progress"></span>
+                <div class="badges">
+                    <span class="badge nivel-alto">Redes</span>
+                    <span class="badge nivel-alto">Sistemas Operacionais</span>
+                    <span class="badge nivel-medio">Manutenção de Hardware</span>
                 </div>
             </div>
 
-            <div class="habilidade-box reveal">
-                <div class="habilidade-info">
-                    <h4>Git e GitHub (Básico)</h4>
-                    <span>70%</span>
+            <!-- Ferramentas -->
+            <div class="habilidade-categoria reveal">
+                <div class="categoria-header">
+                    <i class='bx bx-wrench'></i>
+                    <h3>Ferramentas</h3>
                 </div>
-                <div class="habilidade-bar" data-progress="70%">
-                    <span class="bar-progress"></span>
+                <div class="badges">
+                    <span class="badge nivel-medio">Git</span>
+                    <span class="badge nivel-medio">GitHub</span>
+                    <span class="badge nivel-basico">VS Code</span>
+                    <span class="badge nivel-basico">Figma (básico)</span>
                 </div>
             </div>
+
         </div>
+
     </section>
 
-    <!-- Seção Projetos -->
+    <!-- Projetos -->
     <section class="projetos" id="projetos">
         <h2 class="heading reveal">Meus <span>Projetos</span></h2>
 
         <div class="projetos-container">
-            <!-- Projeto Fictício 1 -->
-            <div class="projeto-box reveal">
-    <div class="projeto-icon">
-        <img src="beach085 (2).png" alt="Logo Beach 085">
-    </div>
-                <h3>Beach 085</h3>
-                <p>Criação de um site de vendas de acessorios de praia junto com meus colegas de turma, Tulio, Murillo e Arthur, utilizando HTML, CSS e JavaScript.</p>
-            <div class="projeto-botoes">
-                <a href="https://tuliovitor.github.io/beach-085-site/" target="_blank" class="btn-projeto">Ver Projeto</a>
-                <a href="https://github.com/tuliovitor/beach-085-site" target="_blank" class="btn-projeto">Ver Código</a>
-            </div>
-         </div>
 
-            <!-- Projeto Fictício 2 -->
+            <!-- Beach 085 -->
+            <div class="projeto-box reveal">
+                <div class="projeto-icon">
+                    <img src="beach085 (2).png" alt="Logo Beach 085">
+                </div>
+                <div class="projeto-tags">
+                    <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+                </div>
+                <h3>Beach 085</h3>
+                <p>Site de vendas de acessórios de praia criado em equipe com Tulio, Murillo e Arthur. Projeto completo com catálogo de produtos e layout responsivo.</p>
+                <div class="projeto-botoes">
+                    <a href="https://tuliovitor.github.io/beach-085-site/" target="_blank" class="btn-projeto">Ver Projeto</a>
+                    <a href="https://github.com/tuliovitor/beach-085-site" target="_blank" class="btn-projeto btn-ghost">Ver Código</a>
+                </div>
+            </div>
+
+            <!-- Memory Clicks -->
+            <div class="projeto-box reveal">
+                <div class="projeto-icon">
+                    <img src="Logonavegador.png" alt="Logo Memory Clicks">
+                </div>
+                <div class="projeto-tags">
+                    <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+                </div>
+                <h3>Memory Clicks</h3>
+                <p>Site desenvolvido para fotografia de alta performance. Interface focada em apresentação visual de imagens com ótima usabilidade.</p>
+                <div class="projeto-botoes">
+                    <a href="https://octavio38.github.io/Projeto-Memory-Clicks/" target="_blank" class="btn-projeto">Ver Projeto</a>
+                    <a href="https://github.com/Octavio38/Projeto-Memory-Clicks" target="_blank" class="btn-projeto btn-ghost">Ver Código</a>
+                </div>
+            </div>
+
+            <!-- Currículo -->
             <div class="projeto-box reveal">
                 <div class="projeto-icon">
                     <i class='bx bx-file'></i>
                 </div>
+                <div class="projeto-tags">
+                    <span class="tag">PDF</span>
+                </div>
                 <h3>Meu Currículo</h3>
-                <p></p>
-                <a href="#" class="btn-projeto">Ver Currículo</a>
-            </div>
-
-            <!-- Projeto Fictício 3 -->
-            <div class="projeto-box reveal">
-                <img src="beach085 (2).png" alt="Logo Beach 085">
-    </div>
-                <h3>Memory Clicks</h3>
-                
-                <p>Site feito para fotos de alta performace. Utilizei HTML, CSS e JavaScript.</p>
-
+                <p>Currículo atualizado com minhas experiências, habilidades técnicas e formação acadêmica para oportunidades de estágio.</p>
                 <div class="projeto-botoes">
-                <a href="https://octavio38.github.io/Projeto-Memory-Clicks/" target="_blank" class="btn-projeto">Ver Projeto</a>
-                <a href="https://github.com/Octavio38/Projeto-Memory-Clicks" target="_blank" class="btn-projeto">Ver Código</a>
+                    <a href="#" class="btn-projeto">Baixar PDF</a>
+                </div>
             </div>
+
         </div>
     </section>
 
-    <!-- Seção de Contato -->
+    <!-- Certificados — Seção Nova -->
+    <section class="certificados" id="certificados">
+        <h2 class="heading reveal">Meus <span>Certificados</span></h2>
+        <p class="certificados-sub reveal">Cursos e certificações que complementam minha formação técnica.</p>
+
+        <div class="certificados-container">
+
+            <!-- Huawei ICT Academy -->
+            <div class="certificado-box reveal">
+                <div class="cert-icon cert-icon-huawei">
+                    <i class='bx bx-chip'></i>
+                </div>
+                <div class="cert-info">
+                    <h4>HCCDA-Tech Essentials Course</h4>
+                    <span class="cert-emissor">Huawei ICT Academy</span>
+                    <span class="cert-ano">Mar 2026</span>
+                </div>
+                <a href="Cópia_de_Octávio_Marcelo.png" target="_blank" class="cert-link" title="Ver certificado"><i class='bx bx-link-external'></i></a>
+            </div>
+
+            <!-- UFC Fábrica de Programadores -->
+            <div class="certificado-box reveal">
+                <div class="cert-icon cert-icon-ufc">
+                    <i class='bx bx-code-block'></i>
+                </div>
+                <div class="cert-info">
+                    <h4>Fábrica de Programadores: Games & IA</h4>
+                    <span class="cert-emissor">Universidade Federal do Ceará</span>
+                    <span class="cert-ano">Fev 2026 · 200h</span>
+                </div>
+                <a href="Certificado_Fabrica_de_Programadores.pdf" target="_blank" class="cert-link" title="Ver certificado"><i class='bx bx-link-external'></i></a>
+            </div>
+
+            <!-- Espaço reservado para próximo certificado -->
+            <div class="certificado-box certificado-vazio reveal">
+                <div class="cert-icon">
+                    <i class='bx bx-plus-circle'></i>
+                </div>
+                <div class="cert-info">
+                    <h4>Em breve...</h4>
+                    <span class="cert-emissor">Próximo certificado</span>
+                    <span class="cert-ano">—</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contato -->
     <section class="contato" id="contato">
         <h2 class="heading reveal">Fale <span>Comigo</span></h2>
 
-        <!-- Formulário para currículo e recrutadores -->
         <form action="#" id="contact-form" class="reveal">
             <div class="input-box">
                 <input type="text" id="nome" placeholder="Seu Nome Completo" required>
                 <input type="email" id="email" placeholder="Endereço de E-mail" required>
             </div>
-
-            <textarea id="mensagem" cols="30" rows="10" placeholder="Digite sua Mensagem para proposta de estágio..."
-                required></textarea>
-
+            <textarea id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem ou proposta de estágio..." required></textarea>
             <button type="submit" class="btn">Enviar Mensagem</button>
-
-            <!-- Feedback Mensagem de Envio -->
-            <div id="form-msg" class="form-feedback hidden">Sua mensagem foi enviada com sucesso! Entrarei em contato.
-            </div>
+            <div id="form-msg" class="form-feedback">Sua mensagem foi enviada com sucesso! Entrarei em contato.</div>
         </form>
     </section>
 
-    <!-- Footer da Página -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-text">
-            <!-- O JS injetará o ano atual no span #ano-atual -->
-            <p>&copy; <span id="ano-atual"></span> pelo Futuro Estágiario. Estudante EEEP Professora Luiza de
-                Teodoro.</p>
+            <p>&copy; <span id="ano-atual"></span> Octávio Gomes · Futuro Estagiário · EEEP Professora Luiza de Teodoro Vieira</p>
         </div>
-
         <div class="footer-iconTop">
             <a href="#home" title="Voltar ao Topo"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </footer>
 
-    <!-- Script Customizado -->
     <script src="script.js"></script>
 </body>
-
 </html>
-
-
-
-
-
