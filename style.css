@@ -387,6 +387,16 @@ section {
     object-fit: cover;
 }
 
+.img-beach {
+    width: 75px;
+    height: 75px;
+}
+
+.img-memory {
+    width: 52px;
+    height: 52px;
+}
+
 /* Tags de tecnologia */
 .projeto-tags {
     display: flex;
