@@ -95,21 +95,50 @@ revealElements();
 document.getElementById('ano-atual').textContent = new Date().getFullYear();
 
 /* =========================================
-   Formulário de Contato
+   EmailJS — Formulário de Contato
 ========================================= */
+emailjs.init('mqoPalRluaKEIrEhG');
+
 const form = document.getElementById('contact-form');
 const formMsg = document.getElementById('form-msg');
+const submitBtn = form.querySelector('button[type="submit"]');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const msg = document.getElementById('mensagem').value;
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
 
-    if (nome.trim() && email.trim() && msg.trim()) {
+    if (!nome || !email || !mensagem) return;
+
+    submitBtn.textContent = 'Enviando...';
+    submitBtn.disabled = true;
+
+    emailjs.send('service_hgz6eia', 'template_31k1shu', {
+        nome: nome,
+        email: email,
+        mensagem: mensagem
+    })
+    .then(() => {
+        formMsg.textContent = '✅ Mensagem enviada com sucesso! Entrarei em contato em breve.';
+        formMsg.style.background = 'rgba(16, 185, 129, 0.15)';
+        formMsg.style.color = '#3fefb0';
+        formMsg.style.border = '1px solid #059669';
         formMsg.classList.add('active');
         form.reset();
-        setTimeout(() => formMsg.classList.remove('active'), 5000);
-    }
+        setTimeout(() => formMsg.classList.remove('active'), 6000);
+    })
+    .catch(() => {
+        formMsg.textContent = '❌ Erro ao enviar. Tente novamente ou me contate diretamente pelo e-mail.';
+        formMsg.style.background = 'rgba(220, 38, 38, 0.15)';
+        formMsg.style.color = '#f87171';
+        formMsg.style.border = '1px solid #dc2626';
+        formMsg.classList.add('active');
+        setTimeout(() => formMsg.classList.remove('active'), 6000);
+    })
+    .finally(() => {
+        submitBtn.textContent = 'Enviar Mensagem';
+        submitBtn.disabled = false;
+    });
 });
