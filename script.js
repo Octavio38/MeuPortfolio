@@ -40,7 +40,7 @@ window.onscroll = () => {
    Efeito de Digitação
 ========================================= */
 const multipleText = document.querySelector('.multiple-text');
-const words = ['Desenvolvedor Frontend', 'Estudante de TI', 'Apaixonado por Tecnologia'];
+const words = ['Desenvolvedor Frontend', 'Técnico em Manutenção', 'Estudante de TI', 'Apaixonado por Tecnologia'];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
